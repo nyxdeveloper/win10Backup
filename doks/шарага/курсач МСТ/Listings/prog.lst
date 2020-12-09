@@ -1,0 +1,93 @@
+C51 COMPILER V9.60.0.0   PROG                                                              04/24/2020 18:14:35 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE PROG
+OBJECT MODULE PLACED IN .\Objects\prog.obj
+COMPILER INVOKED BY: D:\programs\KeilVision\C51\BIN\C51.EXE prog.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\prog.lst) TABS(2) OBJECT(.\Objects\prog.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          sbit P1_0 = 0x90;
+   4          sbit P1_1 = 0x91;
+   5          sbit P1_2 = 0x92;
+   6          sbit P1_3 = 0x93;
+   7          
+   8          sbit P0_4 = 0x84;
+   9          sbit P0_5 = 0x85;
+  10          sbit P0_6 =0x86;
+  11          
+  12          sbit P3_3=0xb3;
+  13          
+  14          unsigned char KeyNum(void)  
+  15                  
+  16          {
+  17   1      P1=0;
+  18   1      P0_4=0;
+  19   1      P0_5=1;
+  20   1      P0_6=1;
+  21   1      if(P1_0==0)return(6);   //do
+  22   1      if(P1_1==0)return(46);  //re diez
+  23   1      if(P1_2==0)return(79);  //fa diez
+  24   1      if(P1_3==0)return(107); //la
+  25   1      P0_4=1;
+  26   1      P0_5=0;
+  27   1      P0_6=1;
+  28   1      if(P1_0==0)return(20);  //do diez
+  29   1      if(P1_1==0)return(57);  //mi
+  30   1      if(P1_2==0)return(89);  //sol
+  31   1      if(P1_3==0)return(116); //la diez
+  32   1      P0_4=1;
+  33   1      P0_5=1;
+  34   1      P0_6=0;
+  35   1      if(P1_0==0)return(33);  //re
+  36   1      if(P1_1==0)return(68);  //fa
+  37   1      if(P1_2==0)return(98);  //sol diez
+  38   1      if(P1_3==0)return(123); //si
+  39   1      return(0);
+  40   1      }
+  41          
+  42          void main(void)
+  43          {
+  44   1      unsigned char I;
+  45   1      
+  46   1      TMOD=(TMOD & 0xcf);
+  47   1      TMOD=(TMOD | 0x20);
+  48   1      TF1=0;
+  49   1      TR1=0;
+  50   1      while (1)
+  51   1      {
+  52   2        
+  53   2      while(KeyNum() == 0);
+  54   2        
+C51 COMPILER V9.60.0.0   PROG                                                              04/24/2020 18:14:35 PAGE 2   
+
+  55   2      TH1=KeyNum();
+  56   2      
+  57   2      
+  58   2      TR1=1;
+  59   2      
+  60   2      for(I=0;I<16;I++)
+  61   2      {
+  62   3      while(TF1==0);
+  63   3      TF1=0;
+  64   3      }
+  65   2      P3_3=!P3_3;
+  66   2      }
+  67   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    143    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

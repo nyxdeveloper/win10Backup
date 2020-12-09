@@ -1,0 +1,22 @@
+[
+    {
+        "firstName": "\u041f\u0430\u0448\u0430",
+        "scores": [
+            100,
+            90.5,
+            99.9
+        ],
+        "secondName": "\u0418\u0432\u0430\u043d\u043e\u0432",
+        "sucefuly": true
+    },
+    {
+        "firstName": "\u0418\u0432\u0430\u043d",
+        "scores": [
+            99.9,
+            100,
+            90.5
+        ],
+        "secondName": "\u041f\u0430\u0448\u0438\u043d",
+        "sucefuly": true
+    }
+]

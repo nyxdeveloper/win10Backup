@@ -1,0 +1,4 @@
+".\Objects\START_AD.obj",
+".\Objects\prog.obj" 
+TO ".\Objects\kursovaya" 
+PRINT(".\Listings\kursovaya.m51") RAMSIZE(256) 

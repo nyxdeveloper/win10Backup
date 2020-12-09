@@ -1,0 +1,358 @@
+@font-face {
+    font-family: Poppins;
+    src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+}
+
+*{
+outline: none !important
+}
+
+html{
+	scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background-image: url("../img/tekstury-tekstura-texture-fon.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+}
+
+button:focus {
+    outline: none;
+}
+
+.cover{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+.cover-img{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    z-index: -1;
+    filter: blur(3px);
+}
+
+.cover-text{
+    font-size: 20vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40vh;
+    font-family: Poppins, sans-serif;
+}
+
+.cover-text .hr{
+    border: 4px solid #212529;
+    height: 0;
+    width: 100%;
+}
+
+.cover-text .arrow{
+    width: 3vw;
+    height: auto;
+    transition: 0.5s;
+}
+
+.cover-text .arrow:hover{
+    transform: translateY(1vw);
+    transition: 0.5s;
+}
+
+.cover-text h1{
+    font-size: 5vw;
+}
+
+.cover-text h3{
+    font-size: 3vw;
+    margin-bottom: 5vw;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    height: 110vh;
+    width: 100vw;
+    padding: 3vw;
+}
+
+.counter{
+    color: #006885;
+    font-size: 10vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about p{
+    font-size: 40px;
+}
+
+.about h1{
+    font-size: 70px;
+}
+
+.about h4{
+    font-size: 50px;
+}
+
+.about .arrow{
+    width: 3vw;
+    height: auto;
+    transition: 0.5s;
+}
+
+.about .arrow:hover{
+    transform: translateY(1vw);
+    transition: 0.5s;
+}
+
+.about_product{
+    color: #C1D8F0;
+    background-size: cover;
+    font-size: 2vh;
+}
+
+#about_product1{
+    background-image: url("../img/about_product.jpg");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_product2{
+    background-image: url("../img/Power_bank.JPG");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_product3{
+    background-image: url("../img/Mobile-accessories.jpg");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_product4{
+    background-image: url("../img/atom.jpg");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_product5{
+    background-image: url("../img/f73JMQnFEqHv.jpg");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about_product6{
+    background-image: url("../img/depositphotos_87208514-stock-illustration-seamless-pattern-set.jpg");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2vh;
+}
+
+.about h3{
+    font-size: 2vh;
+}
+
+.contact{
+    padding: 1vw;
+}
+
+.contact-img{
+    height: 15vw;
+    width: 15vw;
+    border-radius: 100%;
+}
+
+.socialnets{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.social-contact{
+    height: 5vh;
+    width: auto;
+    border-radius: 100%;
+    margin: 7px;
+    transition: 1s;
+}
+
+.social-contact:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+#end{
+    font-size: 2vh;
+    background-image: url("../img/Arthur_C._Clarke_1965.jpg");
+    background-size: cover;
+    color: aliceblue;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.language-menu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.language-menu a{
+    font-size: 0.5vw;
+    text-decoration: none;
+    margin-left: 1vw;
+    color: #FFFFFF;
+}
+
+footer{
+    font-size: 2vh;
+    background: #212529;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2vh;
+}
+
+.questions{
+    padding: 20px;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.open-question{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 30px;
+    background: none;
+    border: 3px solid #212529;
+    border-radius: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    height: auto;
+    transition: 0.5s;
+}
+
+.open-question:hover{
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.open-question:focus{
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.open-question:active{
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.add-question{
+    text-decoration: none;
+    color: #063DE1;
+    background: none;
+    border: none;
+    transition: 1s;
+}
+
+.add-question:hover{
+    color: #042CA3;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.hide {
+    transition: 0.5s;
+    display: none;
+}
+.hide + label ~ div{
+    transition: 0.5s;
+    display: none;
+}
+/* оформляем текст label */
+.hide + label {
+    transition: 0.5s;
+    padding: 0;
+    color: #212529;
+    cursor: pointer;
+    display: inline-block;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    transition: 0.5s;
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    transition: 0.5s;
+    display: block;
+    padding: 10px;
+}
+
+form{
+    width: 50vh;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    border: 2px solid #212529;
+    margin-top: 5px;
+    height: 3vw;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+form textarea{
+    border: 2px solid #212529;
+    margin-top: 5px;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+#send_btn{
+    width: 90px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background: none;
+    border-radius: 100px;
+    transition: 1s;
+}
+
+#send_btn:hover{
+    transition: 0.5s;
+    background: #2BDB21;
+    border-color: #2BDB21;
+    color: #FFFFFF;
+}

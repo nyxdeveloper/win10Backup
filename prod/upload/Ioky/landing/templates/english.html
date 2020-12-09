@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ioky</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/odometer.css'%}" />
+
+    <link rel="stylesheet" href="{% static 'css/odometer-theme-minimal.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous">
+
+    <script src="{% static 'js/odometer.js'%}"></script>
+
+    <script src="{% static 'js/viewportChecker.js'%}"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">IOKY</span>
+        <div class="language-menu">
+            <a href="{% url 'en'%}"><span class="navbar-brand mb-0 h1">EN</span></a>
+            <a href="{% url 'ru'%}"><span class="navbar-brand mb-0 h1">RU</span></a>
+        </div>
+    </nav>
+
+    <div class="cover">
+        <img src="{% static 'img/0ee82e5df1ae4c72eab0b9e8aec0c12e.jpg'%}" alt="cover" class="cover-img">
+        <div class="cover-text">
+            <div class="hr wow fadeInLeft"></div>
+            <h1>
+                <b class="wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">I</b>
+                <b class="wow fadeInUp" data-wow-delay="1s" data-wow-duration="2s">O</b>
+                <b class="wow fadeInUp" data-wow-delay="1s" data-wow-duration="3s">K</b>
+                <b class="wow fadeInUp" data-wow-delay="1s" data-wow-duration="4s">Y</b>
+            </h1>
+            <div class="hr wow fadeInLeft"></div>
+            <h3 class="wow fadeIn" data-wow-delay="2s">new course of progress</h3>
+            <a href="#about_product1"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+        </div>
+    </div>
+
+    <div class="about about_product" id="about_product1">
+        <h1 class="wow fadeIn">IOKY ATOM</h1>
+        <p class="wow fadeInUp">
+            portable charging module powered by innovative energy conversion technology
+        </p>
+        <a href="#about1"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+    </div>
+
+
+    <div class="about wow fadeInLeft" id="about1">
+        <div class="odometer counter" id="od1">
+            <span class="odometer-value"></span>
+        </div>
+        <div>
+            <p>so many people are currently using external power sources</p>
+            <a href="#about_product2"><img class="arrow" src="{% static 'img/arrow_down_dark.png'%}" alt="arrow"></a>
+        </div>
+
+        <script>
+                var offset = 800;
+                $(window).scroll(function(){
+                  var scrolltop = $(this).scrollTop();
+                  $('#od1').each(function(){
+                    if(scrolltop >= $(this).offset().top - offset) {
+                      setTimeout(function(){
+                        $('#od1').html(2000000);
+                      });
+                    }
+                  });
+                });
+        </script>
+    </div>
+
+    <div class="about about_product" id="about_product2">
+        <h1 class="wow fadeIn">MODERN POWERBANKS</h1>
+        <p class="wow fadeInUp">
+            have proven their value almost immediately after entering the market,
+            while the demand
+            for them continues to grow
+        </p>
+        <a href="#about2"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+    </div>
+
+    <div class="about wow fadeInLeft" id="about2">
+        <div class="counter">
+            <div class="odometer odometer-theme-minimal" id="od2">
+                <span class="odometer-value"></span>
+            </div>
+            <span>$</span>
+        </div>
+        <div>
+            <p>
+                will be the size of the portable battery
+                market in 2022 according to forecasts of
+                Allied Market Research
+            </p>
+            <a href="#about_product3"><img class="arrow" src="{% static 'img/arrow_down_dark.png'%}" alt="arrow"></a>
+        </div>
+
+        <script>
+                var offset = 800;
+                $(window).scroll(function(){
+                  var scrolltop = $(this).scrollTop();
+                  $('#od2').each(function(){
+                    if(scrolltop >= $(this).offset().top - offset) {
+                      setTimeout(function(){
+                        $('#od2').html(29600000000);
+                      });
+                    }
+                  });
+                });
+        </script>
+    </div>
+
+    <div class="about about_product" id="about_product3">
+        <h1 class="wow fadeIn">AT THE SAME TIME</h1>
+        <p class="wow fadeInUp">
+            external power supplies are still extremely short-lived and remain the same batteries, which should not
+            to remain so with the growing demand for various gadgets and the spread of wearable electronics
+        </p>
+        <a href="#about3"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+    </div>
+
+    <div class="about wow fadeInLeft" id="about3">
+        <div class="counter">
+            <div class="odometer odometer-theme-minimal" id="od3">
+                <span class="odometer-value"></span>
+            </div>
+            <span>$</span>
+        </div>
+        <div>
+            <p>this is the average price of external chargers in Russia</p>
+            <a href="#about_product4"><img class="arrow" src="{% static 'img/arrow_down_dark.png'%}" alt="arrow"></a>
+        </div>
+
+        <script>
+                var offset = 800;
+                $(window).scroll(function(){
+                  var scrolltop = $(this).scrollTop();
+                  $('#od3').each(function(){
+                    if(scrolltop >= $(this).offset().top - offset) {
+                      setTimeout(function(){
+                        $('#od3').html(27.39);
+                      });
+                    }
+                  });
+                });
+        </script>
+    </div>
+
+    <div class="about about_product" id="about_product4">
+        <h1 class="wow fadeIn">IOKY ATOM</h1>
+        <p class="wow fadeInUp">
+            this, in turn, is not a battery, but an electricity generator, fully operating on
+            a different principle and allows you to charge various devices without discharging the charge for much longer
+            than modern external sources
+            nutrition
+        </p>
+        <a href="#about4"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+    </div>
+
+    <div class="about wow fadeInLeft" id="about4">
+        <div class="counter">
+            <div class="odometer odometer-theme-minimal" id="od4">
+                <span class="odometer-value"></span>
+            </div>
+            <span>$</span>
+        </div>
+        <div>
+            <p>approximate production cost of one Ioky Atom</p>
+            <a href="#about_product5"><img class="arrow" src="{% static 'img/arrow_down_dark.png'%}" alt="arrow"></a>
+        </div>
+
+        <script>
+                var offset = 800;
+                $(window).scroll(function(){
+                  var scrolltop = $(this).scrollTop();
+                  $('#od4').each(function(){
+                    if(scrolltop >= $(this).offset().top - offset) {
+                      setTimeout(function(){
+                        $('#od4').html(46.95);
+                      });
+                    }
+                  });
+                });
+        </script>
+    </div>
+
+    <div class="about about_product" id="about_product5">
+        <h1 class="wow fadeIn">THE MAIN FEATURE</h1>
+        <p class="wow fadeInUp">
+            lies in the durability of the use of this power source
+            and the absence of the need to constantly charge it, and therefore
+            great opportunities for its use open up, not only in everyday life, but also
+            in selected industries
+        </p>
+        <a href="#about5"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+    </div>
+
+    <div class="about wow fadeInLeft" id="about5">
+        <div class="counter">
+            <div class="odometer odometer-theme-minimal" id="od5">
+                <span class="odometer-value"></span>
+            </div>
+            <span>years</span>
+        </div>
+        <div>
+            <p>this is his service life</p>
+            <a href="#about_product6"><img class="arrow" src="{% static 'img/arrow_down_dark.png'%}" alt="arrow"></a>
+        </div>
+
+        <script>
+                var offset = 800;
+                $(window).scroll(function(){
+                  var scrolltop = $(this).scrollTop();
+                  $('#od5').each(function(){
+                    if(scrolltop >= $(this).offset().top - offset) {
+                      setTimeout(function(){
+                        $('#od5').html(10);
+                      });
+                    }
+                  });
+                });
+        </script>
+    </div>
+
+    <div class="about about_product" id="about_product6">
+        <h1 class="wow fadeIn">IN PROSPECTS OF DEVELOPMENT</h1>
+        <p class="wow fadeInUp">
+            improvement of technology and creation of various models of devices for powering devices with
+            increased consumption of energy, vehicles and even individual buildings. <br>
+            Projects IOKY ATOM, QUANTUM и HADRON
+        </p>
+        <a href="#contacts"><img class="arrow" src="{% static 'img/arrow_down_white.png'%}" alt="arrow"></a>
+    </div>
+
+    <div class="about wow fadeInUp" id="contacts">
+        <h2>At the moment we are looking for investors to start the project</h2>
+        <h2>Contact us</h2>
+        <div class="contacts">
+            <div class="contact wow fadeInUp" data-wow-duration="1.5s">
+            <img class="contact-img" src="{% static 'img/5krnqEx5hM4.jpg'%}" alt="">
+            <h1>Nikolay Dyachkov</h1>
+            <h3>Founder of the project</h3>
+            <h3>+7(903)-694-55-33</h3>
+            <h3>teluridkadmiy@gmail.com</h3>
+                <div class="socialnets">
+                    <a href="https://vk.com/nyxdeveloper">
+                        <img src="{% static 'img/vk-256x256.png'%}" alt="vkontakte" class="social-contact">
+                    </a>
+                    <a href="https://t.me/Cort56">
+                        <img src="{% static 'img/1024px-Telegram_logo.svg.png'%}" alt="telegram" class="social-contact">
+                    </a>
+                </div>
+        </div>
+        <div class="contact wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+            <img class="contact-img" src="{% static 'img/DucNMbUmppY.jpg'%}" alt="">
+            <h1>Alan Kulkayev</h1>
+            <h3>Founder of the project</h3>
+            <h3>+7(993)-216-12-08</h3>
+            <h3>kulkay@yandex.com</h3>
+            <div class="socialnets">
+                    <a href="https://vk.com/kulkayev">
+                        <img src="{% static 'img/vk-256x256.png'%}" alt="vkontakte" class="social-contact">
+                    </a>
+                    <a href="https://t.me/Kulkayev">
+                        <img src="{% static 'img/1024px-Telegram_logo.svg.png'%}" alt="telegram" class="social-contact">
+                    </a>
+                </div>
+        </div>
+        </div>
+        <a href="#end"><img class="arrow" src="{% static 'img/arrow_down_dark.png'%}" alt="arrow"></a>
+    </div>
+    <div class="about" id="end">
+        <h1 class="wow fadeInUp" data-wow-duration="2s">
+            Third Law:<br> Any sufficiently advanced technology is indistinguishable from magic.
+        </h1>
+        <h4 class="wow fadeIn" data-wow-delay="2.1s">(c) Arthur Charles Clarke</h4>
+    </div>
+
+    <div class="questions" id="questions">
+            <h2>Questions <a href="#question-form"><button class="add-question">+</button></a></h2>
+        <div class="questions-list">
+        {% if questions %}
+            {% for question in questions %}
+                {% if question.check == True %}
+                    <div class="open-question">
+                        <input type="checkbox" id="hd-{{ question.id }}" class="hide"/>
+                        <label for="hd-{{ question.id }}" >{{ question.question }}</label>
+                        <div>
+                            <hr>
+                            {{ question.answer }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h4>No questions. Ask the first question!</h4>
+        {% endif %}
+
+            <form action="{% url 'create-question' %}" method="post" id="question-form">
+                {% csrf_token %}
+                {{ questionForm }}
+                <input type="submit" id="send_btn" value="Send">
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        <span class="mb-0 h1">IOKY</span><br>
+        <span>Nyx Developer. 2020</span><br>
+        <span>All rights reserved</span>
+        <script src="{% static 'js/wow.min.js'%}"></script>
+        <script>new WOW().init();</script>
+    </footer>
+</body>
+</html>

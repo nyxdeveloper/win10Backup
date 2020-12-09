@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+    <header>
+        <nav style="color: {{ header.color }}; background: {{ header.background }}">
+            <span class="header-brand">{{ header.brand }}</span>
+            {% for link in headersLinks %}
+                <a class="header-link" href="{{ link.href }}">{{ link.text }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+    {% for block in blocks %}
+        <div
+                style="
+                        color: {{ block.textColor }};
+                        background-image: url({{ MEDIA_URL }}{{ block.img.url}});"
+                id="{{ block.blockID }}"
+                class="container wow {{ block.Animation }}"
+                data-wow-duration="{{ block.AnimationDuration }}s"
+                data-wow-delay="{{ block.AnimationDelay }}s">
+            <span
+                    style="
+                            font-size: {{ block.titleSize }}px;"
+                    class="block-title wow {{ block.titleAnimation }}"
+                    data-wow-duration="{{ block.titleAnimationDuration }}s"
+                    data-wow-delay="{{ block.titleAnimationDelay }}s">
+                {{ block.title }}
+            </span>
+            <span
+                    style="
+                            font-size: {{ block.textSize }}px;"
+                    class="block-text wow {{ block.textAnimation }}"
+                    data-wow-duration="{{ block.textAnimationDuration }}s"
+                    data-wow-delay="{{ block.textAnimationDelay }}s">
+                {{ block.text }}
+            </span>
+            {% if block.blockLink != None %}
+                <a href="{{ block.blockLink }}">
+                    <button
+                        style="
+                                color: {{ block.blockLinkTextColor }};
+                                border-color: {{ block.blockLinkBorderColor }};"
+                        class="block-link-btn wow {{ block.blockLinkAnimation }}"
+                        data-wow-duration="{{ block.blockLinkAnimationDuration }}s"
+                        data-wow-delay="{{ block.blockLinkAnimationDelay }}">
+                        {{ block.blockLinkText }}
+                    </button>
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <footer>
+        <h1>{{ footer.brand }}. {{ footer.year }}</h1>
+        <h3>Все права защищены.</h3>
+    </footer>
+{% endblock %}
